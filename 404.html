@@ -1,6 +1,3 @@
----
-layout: null
----
 <body onload="callGoogleScript();">
 <script>
 function callGoogleScript() {
@@ -17,32 +14,21 @@ var request = jQuery.ajax({
  
  // print the returned data from jsonp
   function loadData(e) {
-  //console.log(e);
   try {
   var rows= e;
          for (var i = 1; i < rows.length; i++) {
 	 if (Array.isArray(rows[i])){
           for (var p = 0; p < rows[i].length; p++) { 
-         $("#main").append(rows[i][p]+"<br>");
+         $("#main").append(rows[i][p]+" ");
         	  }
-	}else{
-	//display everything
-	  $("#main").append(rows[i]+"<br>");
 	}
+		console.log(rows[i][p].length); 
 	  }
 	}catch(err) {
-        $("#main").append("No such id. "+ err);
+        $("#main").append("No such redirect present.");
 	}
 }
   </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<div id="main"></div>
-<script>
-	// this is not being used now
-function getURLParameter(name) {
-    var para= decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]);
-   console.log("Fetching: "+para);
-   return para;
-}	
-</script>
+<div id="main">myfiles.ga redirecting....</div>
 </body>
