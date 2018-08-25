@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://r.myfiles.ga/" />
 <meta property="og:site_name" content="r.myfiles.ga" />
 <script type="application/ld+json">
-{"@type":"WebSite","headline":"Welcome","url":"https://r.myfiles.ga/","name":"myfiles.ga","description":"your online place","@context":"http://schema.org"}</script>
+{"@type":"WebSite","headline":"Welcome","url":"https://r.myfiles.ga/","name":"myfiles.ga","description":"url shortner","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -76,7 +76,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   function submitForm() {
-	var url = "https://script.google.com/macros/s/AKfycbzIOFy2k2Dk1Xuu3iFK1K_CkGdQsuS5GuTV-ql-AE7bRjn2UAUL/exec?callback=loadData&des=$('#description').val()&url=$('#url').val() ;
+	var url = "https://script.google.com/macros/s/AKfycbzIOFy2k2Dk1Xuu3iFK1K_CkGdQsuS5GuTV-ql-AE7bRjn2UAUL/exec?callback=loadData&des="+$('#description').val()+"&url="+$('#url').val() ;
 // Make an AJAX call to Google Script
 var request = jQuery.ajax({
       crossDomain: true,
