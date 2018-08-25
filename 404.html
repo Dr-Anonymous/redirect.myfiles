@@ -18,11 +18,7 @@ var request = jQuery.ajax({
   try {
   var rows= e;
          for (var i = 1; i < rows.length; i++) {
-	 if (Array.isArray(rows[i])){
-          for (var p = 0; p < rows[i].length; p++) { 
-         $("#main").append(rows[i][p]+"<br>");
-        	  }
-	}
+	   $("#main").append(rows[i]+"<br>");
 	  }
 	}catch(err) {
         $("#main").append("No such redirect present");
