@@ -62,7 +62,7 @@
   <input type="text" id="url" name="url" placeholder="https://docs.google.com/forms/d/e/sdf">
 <div class="row">
   <br><br>
-  <input type="submit" value="Get my url !" onclick="submitForm(); return false;">
+  <input type="submit" value="Get my url !" onclick="submitForm($('#description').val(), $('#url').val()); return false;">
 </form>
      </section>
     </div>
@@ -75,8 +75,8 @@
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-  function submitForm() {
-	var url = "https://script.google.com/macros/s/AKfycbzIOFy2k2Dk1Xuu3iFK1K_CkGdQsuS5GuTV-ql-AE7bRjn2UAUL/exec?callback=loadData&des="+$('#description').val()+"&url="+$('#url').val() ;
+  function submitForm(des, url) {
+	var url = "https://script.google.com/macros/s/AKfycbzIOFy2k2Dk1Xuu3iFK1K_CkGdQsuS5GuTV-ql-AE7bRjn2UAUL/exec?callback=loadData&des="+des+"&url="+ url ;
 // Make an AJAX call to Google Script
 var request = jQuery.ajax({
       crossDomain: true,
