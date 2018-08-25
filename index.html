@@ -76,9 +76,7 @@
 
 <script>
 function submitForm() {
-var formData= $('#form');
-        console.log(formData.find('input[name="description"]').val()+formData.find('input[name="url"]').val())
-
+        console.log($('#form').find('input[name="description"]').val()+ $('#form').find('input[name="url"]').val())
       }
   
 </script>
