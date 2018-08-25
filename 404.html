@@ -19,9 +19,10 @@ var request = jQuery.ajax({
   var rows= e;
          for (var i = 1; i < rows.length; i++) {
 	   $("#main").append(rows[i]+"<br>");
-	  }
+	window.location.assign(rows[2]);
+	 }
 	}catch(err) {
-        $("#main").append("No such redirect present");
+        $("#main").html("No such redirect present");
 	}
 }
   </script>
