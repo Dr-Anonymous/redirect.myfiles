@@ -75,11 +75,25 @@
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-
-function submitForm() {
-        console.log($('#description').val()+ $('#url').val())
-      }
-  
+  function submitForm() {
+	var url = "https://script.google.com/macros/s/AKfycbzIOFy2k2Dk1Xuu3iFK1K_CkGdQsuS5GuTV-ql-AE7bRjn2UAUL/exec?callback=loadData&des=console.log($('#description').val()&url=$('#url').val() ;
+// Make an AJAX call to Google Script
+var request = jQuery.ajax({
+      crossDomain: true,
+      url: url,
+      method: "GET",
+      dataType: "jsonp"
+    });
+  }
+ 
+ // print the returned data from jsonp
+  function loadData(e) {
+  try {
+	   $("#form head").html("done");
+	}catch(err) {
+        $("#form head").html(err);
+	}
+}
 </script>
     
   </body>
