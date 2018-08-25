@@ -63,7 +63,7 @@
 </div>
 <div class="row">
   <br><br>
-	<center><input type="button" value="Get my url !" onclick="submitForm($('#description').val(), $('#url').val()); return false;" style="border-radius: 6px;width: 50%;height: 2em;"/></center>
+	<center><input type="submit" value="Get my url !" onclick="submitForm($('#description').val(), $('#url').val()); return false;" style="border-radius: 6px;width: 50%;height: 2em;"/></center>
 </div>
 </form>
      </section>
@@ -77,16 +77,6 @@
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-$(document).ready(function() {
-    $("#form").validate({
-        rules: {
-            url: "required"
-        },
-        messages: {
-            url: "Please specify your url"
-        }
-    })
-});
   function submitForm(des, url) {
 	var url = "https://script.google.com/macros/s/AKfycbzIOFy2k2Dk1Xuu3iFK1K_CkGdQsuS5GuTV-ql-AE7bRjn2UAUL/exec?callback=loadData&des="+des+"&url="+ url ;
 // Make an AJAX call to Google Script
