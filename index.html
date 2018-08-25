@@ -54,15 +54,17 @@
 <form novalidate="novalidate">
 <div class="row">
   URL description (this is to easily identify it):<br>
-  <input type="text" id="description" name="description" placeholder="samuel thesis form">
-  </div>
+  <input type="text" id="description" name="description" placeholder="samuel thesis file" style="width: -webkit-fill-available;height: 2em;">
+</div>
 <div class="row">
   <br>
   Full URL (including the preceeding 'http://' or 'https://'):<br>
-  <input type="text" id="url" name="url" placeholder="https://docs.google.com/forms/d/e/sdf">
+  <input type="text" id="url" name="url" placeholder="https://docs.google.com/forms/d/e/sdf" style="width: -webkit-fill-available;height: 2em;">
+</div>
 <div class="row">
   <br><br>
   <input type="submit" value="Get my url !" onclick="submitForm($('#description').val(), $('#url').val()); return false;">
+</div>
 </form>
      </section>
     </div>
