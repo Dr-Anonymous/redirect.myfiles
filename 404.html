@@ -22,16 +22,13 @@ var request = jQuery.ajax({
           for (var p = 0; p < rows[i].length; p++) { 
          $("#main").append(rows[i][p]+"<br>");
         	  }
-	}else{
-	//display everything
-	  $("#main").append(rows[i]+"<br>");
 	}
 	  }
 	}catch(err) {
-        $("#main").append("No such id. "+ err);
+        $("#main").append("No such redirect present");
 	}
 }
   </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<div id="main"></div>
+<div id="main">Redirecting to...</div>
 </body>
