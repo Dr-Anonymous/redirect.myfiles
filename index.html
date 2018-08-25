@@ -89,7 +89,7 @@ var request = jQuery.ajax({
  // print the returned data from jsonp
   function loadData(e) {
   try {
-	   $("#form head").html("your url is e.myfiles.ga/"+ e);
+	   $("#form").html("<h2>your url is e.myfiles.ga/"+ e+"</h2>");
 	}catch(err) {
         $("#form head").html(err);
 	}
