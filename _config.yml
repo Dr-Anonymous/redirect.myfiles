@@ -3,7 +3,6 @@ title: redirect.myfiles
 description: url redirect tool
 show_downloads: false
 google_analytics: 
-theme: jekyll-theme-hacker
 timezone: Asia/Calcutta
 exclude: []
 keep_files: [keep]
