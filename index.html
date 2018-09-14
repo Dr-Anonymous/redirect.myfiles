@@ -58,7 +58,7 @@
 </div>
 <div class="row">
   <br>
-  Full URL (including the preceeding 'http://' or 'https://'):<br>
+  URL or link to the page:<br>
   <input type="text" id="url" name="url" placeholder="https://docs.google.com/forms/d/e/sdf" style="width: -webkit-fill-available;height: 2em;" required>
 </div>
 <div class="row">
@@ -80,8 +80,10 @@
   function submitForm(des, url) {
 	  if (url=='')
 		  return;
+	  else if (url.substring(0, 4)!="http")
+		  url= "http://"+ url;
 $("#form").html("Fetching your url....");
-	var url = "https://script.google.com/macros/s/AKfycbzIOFy2k2Dk1Xuu3iFK1K_CkGdQsuS5GuTV-ql-AE7bRjn2UAUL/exec?callback=loadData&des="+des+"&url="+ url ;
+	var url = "https://script.google.com/macros/s/AKfycbzIOFy2k2Dk1Xuu3iFK1K_CkGdQsuS5GuTV-ql-AE7bRjn2UAUL/exec?callback=loadData&sheet=Sheet1&des="+des+"&url="+ url ;
 // Make an AJAX call to Google Script
 var request = jQuery.ajax({
       crossDomain: true,
@@ -94,7 +96,7 @@ var request = jQuery.ajax({
  // print the returned data from jsonp
   function loadData(e) {
   try {
-	   $("#form").html("<h2>your url is <a style='color:#b5e853;' href='https://r.myfiles.ga/"+ e+"'>r.myfiles.ga/"+ e+"</a></h2><p>Shorten another url ? Reloads are free !</p>");
+	   $("#form").html("<h2>your url is <a style='color:#b5e853;' href='https://myfiles.ga/"+ e+"'>myfiles.ga/"+ e+"</a></h2><p>Shorten another url ? Reloads are free !</p>");
 	}catch(err) {
         $("#form head").html(err);
 	}
